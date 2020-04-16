@@ -168,7 +168,7 @@ static const CGFloat contentHeightForViewInPopover = 414;
 	
 	UILabel *selectedLabel = (UILabel *)[cell viewWithTag:kSelectedLabelTag];
 	if ([self.selectedFont.fontName isEqualToString:fontName]) {
-		selectedLabel.text = @"✔";
+		selectedLabel.text = @"✓";
 	}
 	else {
 		selectedLabel.text = @"";

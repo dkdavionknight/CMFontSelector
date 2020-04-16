@@ -143,7 +143,7 @@ static const CGFloat contentHeightForViewInPopover = 414;
 	
 	UILabel *selectedLabel = (UILabel *)[cell viewWithTag:kSelectedLabelTag];
 	if ([self.selectedFont.familyName isEqualToString:fontFamilyName]) {
-		selectedLabel.text = @"✔";
+		selectedLabel.text = @"✓";
 	}
 	else {
 		selectedLabel.text = @"";
@@ -198,7 +198,7 @@ static const CGFloat contentHeightForViewInPopover = 414;
 #pragma mark UITableViewDelegate methods
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-	CMFontStyleSelectTableViewController *fontStyleSelectTableViewController = [[CMFontStyleSelectTableViewController alloc] initWithNibName:@"CMFontStyleSelectTableViewController" bundle:nil];
+	CMFontStyleSelectTableViewController *fontStyleSelectTableViewController = [[CMFontStyleSelectTableViewController alloc] init];
 	fontStyleSelectTableViewController.fontFamilyName = [self.fontFamilyNames objectAtIndex:indexPath.row];
 	fontStyleSelectTableViewController.selectedFont = self.selectedFont;
 	fontStyleSelectTableViewController.delegate = self;
